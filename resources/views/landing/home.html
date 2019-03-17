@@ -1,0 +1,83 @@
+{% extends "template/app.html" %} {% block main %}
+<section class="hero_single version_1">
+    <div class="wrapper">
+        <div class="container">
+            <h3>A Heading</h3>
+            <p>Some text goes here...</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <form method="GET" action="{{ path_for('search') }}">
+                        <div class="row no-gutters custom-search-input-2">
+                            <div class="col-lg-7">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Enter School Name">
+                                    <i class="icon_search"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <select class="wide">
+                                    <option>All Schools</option>	
+                                    <option>Creche/Day Care</option>
+                                    <option>Primary/JHS</option>
+                                    <option>Secondary</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2">
+                                <input type="Submit" value="Search">
+                            </div>
+                        </div>
+                        <!-- /row -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="bg_color_1">
+    <div class="container margin_60">
+        <div class="main_title_3">
+            <h2>Featured Schools</h2>
+            <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+            <a href="">View all</a>
+        </div>
+
+        <div id="reccomended" class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="review_listing">
+                    <div class="clearfix">
+                        <figure><img src="{{ base_url() }}/assets/img/avatar1.jpg" alt=""></figure>
+                        <h4 class="mb-0">School Name</h4>
+                        <small>Category</small>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quia sit sed dolorum perspiciatis blanditiis assumenda ea, eos voluptatem libero enim vero, vitae quasi sequi itaque, veritatis tempore? Sit, vero!</p>
+                    <ul class="clearfix">
+                        <li><small>School Ammenities</small></li>
+                        <li><a href="" class="btn_1 small">View School</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /carousel -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /bg_color_1 -->
+
+<div class="call_section">
+    <div class="container margin_80_55">
+        <div class="row justify-content-center">
+            <div class="col-xl-5 col-lg-6">
+                <img alt="" class="img-fluid" src="{{ base_url() }}/assets/img/graphic_home_1.svg">
+            </div>
+            <div class="col-xl-5 col-lg-6 pt-lg-5">
+                <h3>Let's Help You</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quo totam est hic expedita obcaecati, aliquam omnis repudiandae. Sed, repudiandae recusandae illum quos totam expedita deleniti eligendi neque accusantium ipsum?</p>
+                <p><a class="btn_1 add_top_10 wow bounceIn" href="" data-wow-delay="0.1s">Join {{ app.name }} Now!</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{
+    "settings": {
+        "displayErrorDetails": true,
+        "logger": {
+            "name": "Schoolfinder",
+            "level": "Monolog\\ Logger::DEBUG",
+            "path": "__DIR__ . '/../logs/app.log'"
+        },
+        "db": {
+            "driver": "mysql",
+            "host": "localhost",
+            "database": "",
+            "username": "",
+            "password": "",
+            "charset": "utf8",
+            "collation": "utf8_unicode_ci",
+            "prefix": ""
+        },
+        "mail": {
+
+        },
+        "sms": {
+            "username": "",
+            "password": ""
+        }
+    },
+    "app": {
+        "name": "Schoolfinder",
+        "email": "",
+        "noreply-email": "",
+        "telephone": "",
+        "url": "http://app100.localhost/schoolfinder/public/"
+    },
+    "twig": {
+        "debug": true
+    }
+}
