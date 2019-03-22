@@ -2061,7 +2061,7 @@ ul#additional_links li:after {
 }
 
 .custom-search-input-2.inner input[type='submit']:hover {
-    background-color: #3578fa;
+    background-color: #FFC107;
 }
 
 @media (max-width: 575px) {
@@ -2641,7 +2641,7 @@ a.btn_search_mobile {
 }
 
 .search_mob_wp input[type='submit']:hover {
-    background-color: #32a067;
+    background-color: #3578fa;
     color: #fff;
 }
 
