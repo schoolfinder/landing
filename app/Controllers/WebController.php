@@ -39,7 +39,7 @@
         {
             return $this->view->render($response, 'views/landing/search.html', [
                 'title' => 'Home',
-                'uri' => 'home'
+                'uri' => 'search'
             ]);
         }
     }

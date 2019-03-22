@@ -2,58 +2,58 @@
 <div id="results">
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-lg-3 col-md-4 col-10">
+            <div class="col-lg-3 col-md-4 col-9">
                 <h1><strong>145</strong> result for "Category"</h1>
             </div>
-            <div class="col-xl-5 col-md-6 col-2">
+            <div class="col-xl-6 col-md-7 col-3">
                 <a href="#0" class="search_mob btn_search_mobile"></a>
-                <!-- /open search panel -->
-                <div class="row no-gutters custom-search-input-2 inner">
-                    <div class="col-lg-7">
-                        <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Enter School Name">
-                            <i class="icon_search"></i>
+                <form method="GET" action="{{ path_for('search') }}">
+                    <div class="row no-gutters custom-search-input-2 inner">
+                        <div class="col-lg-7">
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Enter Your Location">
+                                <a href="javascript:location()"><i class="icon-location-6"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <select class="wide">
+                                <option>All Schools</option>	
+                                <option>Creche/Day Care</option>
+                                <option>Primary/JHS</option>
+                                <option>Secondary</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="Submit" value="Search">
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <select class="wide">
-                            <option>All Schools</option>	
-                            <option>Creche/Day Care</option>
-                            <option>Primary/JHS</option>
-                            <option>Secondary</option>
-                        </select>
-                    </div>
-                    <div class="col-xl-1 col-lg-1">
-                        <input type="submit" value="Search">
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
-        <!-- /row -->
+
         <div class="search_mob_wp">
-            <div class="custom-search-input-2">
-                <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Search reviews...">
-                    <i class="icon_search"></i>
+            <form method="GET" action="{{ path_for('search') }}">
+                <div class="custom-search-input-2">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="School Name">
+                        <i class="icon-home-4"></i>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Locatoion">
+                        <a href="javascript:location()"><i class="icon-location-6"></i></a>
+                    </div>
+                    <select class="wide">
+                        <option>All Schools</option>	
+                        <option>Creche/Day Care</option>
+                        <option>Primary/JHS</option>
+                        <option>Secondary</option>
+                    </select>
+                    <input type="submit" value="Search">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Where">
-                    <i class="icon_pin_alt"></i>
-                </div>
-                <select class="wide">
-                    <option>All Schools</option>	
-                    <option>Creche/Day Care</option>
-                    <option>Primary/JHS</option>
-                    <option>Secondary</option>
-                </select>
-                <input type="submit" value="Search">
-            </div>
+            </form>
         </div>
-        <!-- /search_mobile -->
     </div>
-    <!-- /container -->
 </div>
-<!-- /results -->
 
 <div class="filters_listing sticky_horizontal">
     <div class="container">
@@ -153,7 +153,7 @@
 
     <div class="isotope-wrapper">
 
-        <div class="review_listing isotope-item high">
+        <div class="review_listing isotope-item high d-none">
             <div class="row">
                 <div class="col-md-10">
                     <div class="company_info">
@@ -196,7 +196,7 @@
     </div>
     <!-- /isotope-wrapper -->
 
-    <p class="text-center"><a href="#0" class="btn_1 rounded add_top_15">Load more</a></p>
+    <p class="text-center"><a href="#0" class="btn_2 rounded add_top_15">Load more</a></p>
 
 </div>
 <!-- /container -->

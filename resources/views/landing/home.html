@@ -1,9 +1,9 @@
 {% extends "template/app.html" %} {% block main %}
-<section class="hero_single version_1">
+<section class="hero_single version_4">
     <div class="wrapper">
         <div class="container">
-            <h3>Let's help you find the perfect school for your child</h3>
-            <p>Start by providing your location</p>
+            <h3>Let's help you find the perfect school for your child.</h3>
+            <p>Start by providing your location.</p>
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <form method="GET" action="{{ path_for('search') }}">
@@ -11,7 +11,7 @@
                             <div class="col-lg-7">
                                 <div class="form-group">
                                     <input class="form-control" type="text" placeholder="Enter Your Location">
-                                    <i class="icon_location"></i>
+                                    <a href="javascript:location()"><i class="icon-location-6"></i></a>
                                 </div>
                             </div>
                             <div class="col-lg-3">

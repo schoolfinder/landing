@@ -31,18 +31,18 @@
 
 <body>
     <div id="page">
-        <header class="header menu_fixed">
+        <!-- <header class="{{ (uri == 'search') ? 'header_in' : 'header menu_fixed' }}">
             <div id="logo">
                 <a href="">
-                    <!-- <img src="{{ base_url() }}/assets/img/logo.svg" width="140" height="35" alt="" class="logo_normal">
-                    <img src="{{ base_url() }}/assets/img/logo_sticky.svg" width="140" height="35" alt="" class="logo_sticky"> -->
+                    <img src="{{ base_url() }}/assets/img/logo.svg" width="140" height="35" alt="" class="logo_normal">
+                    <img src="{{ base_url() }}/assets/img/logo_sticky.svg" width="140" height="35" alt="" class="logo_sticky">
                     {{ app.name }}
                 </a>
             </div>
             <ul id="top_menu">
                 <li><a href="{{ path_for('for-schools') }}" class="btn_top">For Schools</a></li>
             </ul>
-            <!-- /top_menu -->
+            
             <a href="#menu" class="btn_mobile">
                 <div class="hamburger hamburger--spin" id="hamburger">
                     <div class="hamburger-box">
@@ -50,7 +50,7 @@
                     </div>
                 </div>
             </a>
-            <!-- /btn_mobile -->
+            
             <nav id="menu" class="main-menu">
                 <ul>
                     <li><span><a href="{{ path_for('home') }}">Home</a></span></li>
@@ -58,6 +58,41 @@
                     <li><span><a href="{{ path_for('contact-us') }}">Contact Us</a></span></li>
                 </ul>
             </nav>
+        </header> -->
+
+        <header class="{{ (uri == 'search') ? 'header_in' : 'header menu_fixed' }}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-12">
+                        <div id="logo">
+                            <a href="{{ path_for('home') }}">
+                                {{ app.name }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-12">
+                        <ul id="top_menu">
+                            <li><a href="{{ path_for('for-schools') }}" class="btn_top">For Schools</a></li>
+                        </ul>
+
+                        <a href="#menu" class="btn_mobile">
+                            <div class="hamburger hamburger--spin" id="hamburger">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <nav id="menu" class="main-menu">
+                            <ul>
+                                <li><span><a href="{{ path_for('home') }}">Home</a></span></li>
+                                <li><span><a href="{{ path_for('features') }}">Features</a></span></li>
+                                <li><span><a href="{{ path_for('contact-us') }}">Contact Us</a></span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <main>
@@ -79,8 +114,8 @@
                             <ul class="links">
                                 <li><a href="#0">About us</a></li>
                                 <li><a href="#0">Help</a></li>
-                                <li><a href="#0">For Schools</a></li>
-                                <li><a href="#0">Contact Us</a></li>
+                                <li><a href="{{ path_for('for-schools') }}">For Schools</a></li>
+                                <li><a href="{{ path_for('contact-us') }}">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -149,7 +184,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- /row-->
                 <hr>
                 <div class="row">
                     <div class="col-lg-6">
@@ -176,7 +210,6 @@
                 </div>
             </div>
         </footer>
-        <!--/footer-->
     </div>
 
 
