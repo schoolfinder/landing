@@ -37,9 +37,13 @@
 
         public function search($request, $response)
         {
+            $results = 0;
+            $text = ($results != 1) ? 'results' : 'result';
+
             return $this->view->render($response, 'views/landing/search.html', [
                 'title' => 'Home',
-                'uri' => 'search'
+                'uri' => 'search',
+                'found' => '<strong>'.$results.'</strong> '.$text.' found'
             ]);
         }
     }
