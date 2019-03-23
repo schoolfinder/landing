@@ -10,11 +10,11 @@
     <title>{{ app.name }}</title>
 
     <!-- Favicons-->
-    <link rel="shortcut icon" href="{{ base_url() }}/assets/img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="{{ base_url() }}/assets/img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="{{ base_url() }}/assets/img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="{{ base_url() }}/assets/img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="{{ base_url() }}/assets/img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="shortcut icon" href="{{ base_url() }}/assets/img/" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="{{ base_url() }}/assets/img/">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="{{ base_url() }}/">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="{{ base_url() }}/">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="{{ base_url() }}/">
 
     <!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
@@ -190,11 +190,13 @@
     <script src="{{ base_url() }}/assets/js/common_scripts.js"></script>
     <script src="{{ base_url() }}/assets/js/functions.js"></script>
     <!-- <script src="assets/validate.js"></script> -->
+    <!-- AIzaSyC-Q2J9EU8j4hRaEhh6gWTiSFEz0CQ9pcM -->
     <script>
         function getLocation() {
             if ("geolocation" in navigator) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                     alert("Found your location\nLat : " + position.coords.latitude + "\nLong :" + position.coords.longitude);
+                    console.log(position.coords.latitude + "," + position.coords.longitude);
                 });
             } else {
                 console.log("Browser doesn't support geolocation!");
