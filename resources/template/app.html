@@ -31,35 +31,6 @@
 
 <body>
     <div id="page">
-        <!-- <header class="{{ (uri == 'search') ? 'header_in' : 'header menu_fixed' }}">
-            <div id="logo">
-                <a href="">
-                    <img src="{{ base_url() }}/assets/img/logo.svg" width="140" height="35" alt="" class="logo_normal">
-                    <img src="{{ base_url() }}/assets/img/logo_sticky.svg" width="140" height="35" alt="" class="logo_sticky">
-                    {{ app.name }}
-                </a>
-            </div>
-            <ul id="top_menu">
-                <li><a href="{{ path_for('for-schools') }}" class="btn_top">For Schools</a></li>
-            </ul>
-            
-            <a href="#menu" class="btn_mobile">
-                <div class="hamburger hamburger--spin" id="hamburger">
-                    <div class="hamburger-box">
-                        <div class="hamburger-inner"></div>
-                    </div>
-                </div>
-            </a>
-            
-            <nav id="menu" class="main-menu">
-                <ul>
-                    <li><span><a href="{{ path_for('home') }}">Home</a></span></li>
-                    <li><span><a href="{{ path_for('features') }}">Features</a></span></li>
-                    <li><span><a href="{{ path_for('contact-us') }}">Contact Us</a></span></li>
-                </ul>
-            </nav>
-        </header> -->
-
         <header class="{{ (uri == 'search') ? 'header_in' : 'header menu_fixed' }}">
             <div class="container">
                 <div class="row">
@@ -218,8 +189,18 @@
     <!-- COMMON SCRIPTS -->
     <script src="{{ base_url() }}/assets/js/common_scripts.js"></script>
     <script src="{{ base_url() }}/assets/js/functions.js"></script>
-    <script src="assets/validate.js"></script>
-
+    <!-- <script src="assets/validate.js"></script> -->
+    <script>
+        function getLocation() {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    alert("Found your location\nLat : " + position.coords.latitude + "\nLong :" + position.coords.longitude);
+                });
+            } else {
+                console.log("Browser doesn't support geolocation!");
+            }
+        }
+    </script>
 </body>
 
 </html>

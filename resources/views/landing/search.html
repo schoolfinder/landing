@@ -7,147 +7,27 @@
             </div>
             <div class="col-xl-6 col-md-7 col-3">
                 <a href="#0" class="search_mob btn_search_mobile"></a>
-                <form method="GET" action="{{ path_for('search') }}">
-                    <div class="row no-gutters custom-search-input-2 inner">
-                        <div class="col-lg-7">
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Enter Your Location">
-                                <a href="javascript:location()"><i class="icon-location-6"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <select class="wide">
-                                <option>All Schools</option>	
-                                <option>Creche/Day Care</option>
-                                <option>Primary/JHS</option>
-                                <option>Secondary</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-2">
-                            <input type="Submit" value="Search">
-                        </div>
-                    </div>
-                </form>
+                {{ block('search_mob', "partials/forms/search-form.twig") }}
             </div>
         </div>
 
         <div class="search_mob_wp">
-            <form method="GET" action="{{ path_for('search') }}">
-                <div class="custom-search-input-2">
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="School Name">
-                        <i class="icon-home-4"></i>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Locatoion">
-                        <a href="javascript:location()"><i class="icon-location-6"></i></a>
-                    </div>
-                    <select class="wide">
-                        <option>All Schools</option>	
-                        <option>Creche/Day Care</option>
-                        <option>Primary/JHS</option>
-                        <option>Secondary</option>
-                    </select>
-                    <input type="submit" value="Search">
-                </div>
-            </form>
+            {{ block('search_mob_wp', "partials/forms/search-form.twig") }}
         </div>
     </div>
 </div>
 
 <div class="filters_listing sticky_horizontal">
     <div class="container">
-        <ul class="clearfix">
-            <li>
-                <div class="switch-field">
-                    <input type="radio" id="all" name="listing_filter" value="all" checked data-filter="*" class="selected">
-                    <label for="all">All</label>
-                    <input type="radio" id="high" name="listing_filter" value="high" data-filter=".high">
-                    <label for="high">High rated</label>
-                    <input type="radio" id="low" name="listing_filter" value="low" data-filter=".low">
-                    <label for="low">Low rated</label>
-                </div>
-            </li>
-            <li><a class="btn_filt" data-toggle="collapse" href="#filters" aria-expanded="false" aria-controls="filters" data-text-swap="Less filters" data-text-original="More filters">More filters</a></li>
-        </ul>
+        {{ block('filters_listing', "partials/forms/filters-form.twig") }}
     </div>
-    <!-- /container -->
 </div>
-<!-- /filters -->
 
 <div class="collapse" id="filters">
     <div class="container margin_30_5">
-        <div class="row">
-            <div class="col-md-4">
-                <h6>Rating</h6>
-                <ul>
-                    <li>
-                        <label class="container_check">Superb 9+ <small>67</small>
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                         </label>
-                    </li>
-                    <li>
-                        <label class="container_check">Very Good 8+ <small>89</small>
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                         </label>
-                    </li>
-                    <li>
-                        <label class="container_check">Good 7+ <small>45</small>
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                         </label>
-                    </li>
-                    <li>
-                        <label class="container_check">Pleasant 6+ <small>78</small>
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                         </label>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h6>Tags</h6>
-                <ul>
-                    <li>
-                        <label class="container_check">Soluta mei <small>12</small>
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                         </label>
-                    </li>
-                    <li>
-                        <label class="container_check">Enim suscipit  <small>11</small>
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                         </label>
-                    </li>
-                    <li>
-                        <label class="container_check">Duis veri <small>23</small>
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                         </label>
-                    </li>
-                    <li>
-                        <label class="container_check">Dicunt nam <small>56</small>
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                         </label>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <div class="add_bottom_30">
-                    <h6>Distance</h6>
-                    <div class="distance"> Radius around selected destination <span></span> km</div>
-                    <input type="range" min="10" max="100" step="10" value="30" data-orientation="horizontal">
-                </div>
-            </div>
-        </div>
-        <!-- /row -->
+        {{ block('filters_advance', "partials/forms/filters-form.twig") }}
     </div>
 </div>
-<!-- /Filters -->
 
 <div class="container margin_60_35">
 
@@ -190,14 +70,11 @@
                 </div>
             </div>
         </div>
-        <!-- /company_listing -->
 
 
     </div>
-    <!-- /isotope-wrapper -->
 
     <p class="text-center"><a href="#0" class="btn_2 rounded add_top_15">Load more</a></p>
 
 </div>
-<!-- /container -->
 {% endblock %}

@@ -1,0 +1,85 @@
+{% block filters_listing %}
+    <ul class="clearfix">
+        <li>
+            <div class="switch-field">
+                <input type="radio" id="all" name="listing_filter" value="all" checked data-filter="*" class="selected">
+                <label for="all">All</label>
+                <input type="radio" id="high" name="listing_filter" value="high" data-filter=".high">
+                <label for="high">High rated</label>
+                <input type="radio" id="low" name="listing_filter" value="low" data-filter=".low">
+                <label for="low">Low rated</label>
+            </div>
+        </li>
+        <li><a class="btn_filt" data-toggle="collapse" href="#filters" aria-expanded="false" aria-controls="filters" data-text-swap="Less filters" data-text-original="More filters">More filters</a></li>
+    </ul>
+{% endblock %}
+
+{% block filters_advance %}
+    <div class="row">
+        <div class="col-md-4">
+            <h6>Rating</h6>
+            <ul>
+                <li>
+                    <label class="container_check">Superb 9+ <small>67</small>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                </li>
+                <li>
+                    <label class="container_check">Very Good 8+ <small>89</small>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                </li>
+                <li>
+                    <label class="container_check">Good 7+ <small>45</small>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                </li>
+                <li>
+                    <label class="container_check">Pleasant 6+ <small>78</small>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h6>Tags</h6>
+            <ul>
+                <li>
+                    <label class="container_check">Soluta mei <small>12</small>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                </li>
+                <li>
+                    <label class="container_check">Enim suscipit  <small>11</small>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                </li>
+                <li>
+                    <label class="container_check">Duis veri <small>23</small>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                </li>
+                <li>
+                    <label class="container_check">Dicunt nam <small>56</small>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <div class="add_bottom_30">
+                <h6>Distance</h6>
+                <div class="distance"> Radius around selected destination <span></span> km</div>
+                <input type="range" min="10" max="100" step="10" value="30" data-orientation="horizontal">
+            </div>
+        </div>
+    </div>
+{% endblock %}

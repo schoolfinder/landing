@@ -6,28 +6,7 @@
             <p>Start by providing your location.</p>
             <div class="row justify-content-center">
                 <div class="col-lg-9">
-                    <form method="GET" action="{{ path_for('search') }}">
-                        <div class="row no-gutters custom-search-input-2">
-                            <div class="col-lg-7">
-                                <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Enter Your Location">
-                                    <a href="javascript:location()"><i class="icon-location-6"></i></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <select class="wide">
-                                    <option>All Schools</option>	
-                                    <option>Creche/Day Care</option>
-                                    <option>Primary/JHS</option>
-                                    <option>Secondary</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-2">
-                                <input type="Submit" value="Search">
-                            </div>
-                        </div>
-                        <!-- /row -->
-                    </form>
+                    {{ block('search_home', "partials/forms/search-form.twig") }}
                 </div>
             </div>
         </div>

@@ -1,0 +1,69 @@
+{% block search_home %}
+    <form method="GET" action="{{ path_for('search') }}">
+        <div class="row no-gutters custom-search-input-2">
+            <div class="col-lg-7">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Enter Your Location">
+                    <a href="javascript:getLocation()"><i class="icon-location-6"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <select class="wide">
+                    <option>All Schools</option>	
+                    <option>Creche/Day Care</option>
+                    <option>Primary/JHS</option>
+                    <option>Secondary</option>
+                </select>
+            </div>
+            <div class="col-lg-2">
+                <input type="Submit" value="Search">
+            </div>
+        </div>
+    </form>
+{% endblock %}
+
+{% block search_mob %}
+    <form method="GET" action="{{ path_for('search') }}">
+        <div class="row no-gutters custom-search-input-2 inner">
+            <div class="col-lg-7">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Enter Your Location">
+                    <a href="javascript:getLocation()"><i class="icon-location-6"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <select class="wide">
+                    <option>All Schools</option>	
+                    <option>Creche/Day Care</option>
+                    <option>Primary/JHS</option>
+                    <option>Secondary</option>
+                </select>
+            </div>
+            <div class="col-lg-2">
+                <input type="Submit" value="Search">
+            </div>
+        </div>
+    </form>
+{% endblock %}
+
+{% block search_mob_wp %}
+    <form method="GET" action="{{ path_for('search') }}">
+        <div class="custom-search-input-2">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="School Name">
+                <i class="icon-home-4"></i>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Locatoion">
+                <a href="javascript:getLocation()"><i class="icon-location-6"></i></a>
+            </div>
+            <select class="wide">
+                <option>All Schools</option>	
+                <option>Creche/Day Care</option>
+                <option>Primary/JHS</option>
+                <option>Secondary</option>
+            </select>
+            <input type="submit" value="Search">
+        </div>
+    </form>
+{% endblock %}
