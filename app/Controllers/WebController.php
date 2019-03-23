@@ -14,24 +14,32 @@
         public function features($request, $response)
         {
             return $this->view->render($response, 'views/landing/features.html', [
-                'title' => 'Home',
-                'uri' => 'home'
+                'title' => 'Features',
+                'uri' => 'features'
             ]);
         }
 
         public function contact_us($request, $response)
         {
             return $this->view->render($response, 'views/landing/contact-us.html', [
-                'title' => 'Home',
-                'uri' => 'home'
+                'title' => 'Contact Us',
+                'uri' => 'contact-us'
             ]);
         }
 
         public function for_schools($request, $response)
         {
             return $this->view->render($response, 'views/landing/for-schools.html', [
-                'title' => 'Home',
-                'uri' => 'home'
+                'title' => 'For Schools',
+                'uri' => 'for-schools'
+            ]);
+        }
+
+        public function pricing($request, $response)
+        {
+            return $this->view->render($response, 'views/landing/pricing.html', [
+                'title' => 'Pricing',
+                'uri' => 'pricing'
             ]);
         }
 
@@ -41,7 +49,7 @@
             $text = ($results != 1) ? 'results' : 'result';
 
             return $this->view->render($response, 'views/landing/search.html', [
-                'title' => 'Home',
+                'title' => 'Search',
                 'uri' => 'search',
                 'found' => '<strong>'.$results.'</strong> '.$text.' found'
             ]);

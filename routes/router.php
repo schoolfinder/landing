@@ -6,4 +6,5 @@
         $this->get('/contact-us', 'WebController:contact_us')->setName('contact-us');
         $this->get('/for-schools', 'WebController:for_schools')->setName('for-schools');
         $this->get('/search', 'WebController:search')->setName('search');
+        $this->get('/pricing', 'WebController:pricing')->setName('pricing');
     });
