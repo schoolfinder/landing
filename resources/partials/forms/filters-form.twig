@@ -19,35 +19,6 @@
 {% block filters_advance %}
     <div class="row">
         <div class="col-md-3">
-            <h6>Services</h6>
-            <ul>
-                <li>
-                    <label class="container_check">School Bus
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        </label>
-                </li>
-                <li>
-                    <label class="container_check">Feeding
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        </label>
-                </li>
-                <li>
-                    <label class="container_check">Day Care
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        </label>
-                </li>
-                <li>
-                    <label class="container_check">After School Care
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        </label>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-3">
             <h6>Ratings</h6>
             <ul>
                 <li>
@@ -76,6 +47,35 @@
                 </li>
             </ul>
         </div>
+        <div class="col-md-3">
+            <h6>Services</h6>
+            <ul>
+                <li>
+                    <label class="container_check">School Bus
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                </li>
+                <li>
+                    <label class="container_check">Feeding
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                </li>
+                <li>
+                    <label class="container_check">Day Care
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                </li>
+                <li>
+                    <label class="container_check">After School Care
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                </li>
+            </ul>
+        </div>
         <div class="col-md-4 offset-md-2">
             <div class="add_bottom_30">
                 <h6>Distance</h6>
@@ -90,53 +90,29 @@
     <div id="filters_col">
         <a data-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt">Filters </a>
         <div class="collapse show" id="collapseFilters">
-            <div class="filter_type date_filter">
-                <h6>Date</h6>
-                <ul>
-                    <li>
-                        <label class="container_radio">All
-                                <input type="radio" id="all_2" name="filters_listing" value="all" checked data-filter="*" class="selected">
-                                <span class="checkmark"></span>
-                            </label>
-                    </li>
-                    <li>
-                        <label class="container_radio">Latest
-                    <input type="radio" id="latest" name="filters_listing" value="latest" data-filter=".latest">
-                    <span class="checkmark"></span>
-                </label>
-                    </li>
-                    <li>
-                        <label class="container_radio">Oldest
-                    <input type="radio" id="oldest" name="filters_listing" value="oldest" data-filter=".oldest">
-                    <span class="checkmark"></span>
-                </label>
-                    </li>
-
-                </ul>
-            </div>
             <div class="filter_type">
-                <h6>Category</h6>
+                <h6>Ratings</h6>
                 <ul>
                     <li>
-                        <label class="container_check">Restaurants <small>43</small>
+                        <label class="container_check">Excellent <small>9+</small>
                             <input type="checkbox">
                             <span class="checkmark"></span>
                             </label>
                     </li>
                     <li>
-                        <label class="container_check">Shops <small>33</small>
+                        <label class="container_check">Very Good  <small>7+</small>
                             <input type="checkbox">
                             <span class="checkmark"></span>
                             </label>
                     </li>
                     <li>
-                        <label class="container_check">Bars <small>12</small>
+                        <label class="container_check">Good <small>5+</small>
                             <input type="checkbox">
                             <span class="checkmark"></span>
                             </label>
                     </li>
                     <li>
-                        <label class="container_check">Events <small>44</small>
+                        <label class="container_check">Average <small>3+</small>
                             <input type="checkbox">
                             <span class="checkmark"></span>
                             </label>
@@ -144,33 +120,40 @@
                 </ul>
             </div>
             <div class="filter_type">
-                <h6>Rating</h6>
+                <h6>Services</h6>
                 <ul>
                     <li>
-                        <label class="container_check">Superb 9+ <small>34</small>
+                        <label class="container_check">School Bus
                             <input type="checkbox">
                             <span class="checkmark"></span>
                             </label>
                     </li>
                     <li>
-                        <label class="container_check">Very Good 8+ <small>21</small>
+                        <label class="container_check">Feeding
                             <input type="checkbox">
                             <span class="checkmark"></span>
                             </label>
                     </li>
                     <li>
-                        <label class="container_check">Good 7+ <small>15</small>
+                        <label class="container_check">Day Care
                             <input type="checkbox">
                             <span class="checkmark"></span>
                             </label>
                     </li>
                     <li>
-                        <label class="container_check">Pleasant 6+ <small>34</small>
+                        <label class="container_check">After School Care
                             <input type="checkbox">
                             <span class="checkmark"></span>
                             </label>
                     </li>
                 </ul>
+            </div>
+            <div class="filter_type">
+                <div class="add_bottom_30">
+                    <h6>Distance</h6>
+                    <div class="distance"> Radius around selected destination <span></span> km</div>
+                    <input type="range" min="10" max="100" step="10" value="40" data-orientation="horizontal">
+                </div>
             </div>
         </div>
     </div>
