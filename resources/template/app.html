@@ -31,7 +31,7 @@
 
 <body>
     <div id="page" class="theia-exception">
-        <header class="{{ (uri in ['contact-us', 'search', 'schools', 'view-school'] ) ? 'header_in' : 'header menu_fixed' }} {{ uri == 'view-school' ? 'is_fixed menu_fixed' : '' }}">
+        <header class="{{ (uri in ['search'] ) ? 'header_in' : 'header menu_fixed' }} {{ uri in ['schools', 'view-school', 'contact-us'] ? 'header_in is_fixed menu_fixed' : '' }}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-12">
@@ -56,9 +56,9 @@
 
                         <nav id="menu" class="main-menu">
                             <ul>
-                                <li><span><a href="{{ path_for('home') }}">Home</a></span></li>
-                                <li><span><a href="{{ path_for('schools') }}">Schools</a></span></li>
-                                <li><span><a href="{{ path_for('contact-us') }}">Contact Us</a></span></li>
+                                <li {{ (uri=='home' ) ? 'class="active"' : '' }}><span><a href="{{ path_for('home') }}">Home</a></span></li>
+                                <li {{ (uri in [ 'schools', 'view-school']) ? 'class="active"' : '' }}><span><a href="{{ path_for('schools') }}">Schools</a></span></li>
+                                <li {{ (uri=='contact-us' ) ? 'class="active"' : '' }}><span><a href="{{ path_for('contact-us') }}">Contact Us</a></span></li>
                             </ul>
                         </nav>
                     </div>
