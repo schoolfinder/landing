@@ -1,9 +1,4 @@
 /*
-Theme Name: Vanno
-Theme URI: http://www.ansonika.com/vanno/
-Author: Ansonika
-Author URI: http://themeforest.net/user/Ansonika/
-
 [Table of contents] 
 
 1. SITE STRUCTURE and TYPOGRAPHY
@@ -3132,7 +3127,7 @@ a#filters_col_bt:before {
 
 .reviews_summary {
     margin-top: 58px;
-    background-color: #051d4d;
+    background-image: url();
     border-bottom: 1px solid #ededed;
 }
 
@@ -3503,20 +3498,20 @@ a#filters_col_bt:before {
     }
 }
 
-.box_general.company_info {
+.box_general.school_info {
     padding-bottom: 1px;
 }
 
-.box_general.company_info h3,
-.box_general.company_info h4 {
+.box_general.school_info h3,
+.box_general.school_info h4 {
     font-weight: 500;
 }
 
-.box_general.company_info p {
+.box_general.school_info p {
     margin-bottom: 15px;
 }
 
-.box_general.company_info .follow_company a {
+.box_general.school_info .follow_school a {
     font-size: 21px;
     font-size: 1.3125rem;
     color: #999;
@@ -3524,7 +3519,7 @@ a#filters_col_bt:before {
     margin-right: 5px;
 }
 
-.box_general.company_info .follow_company a:hover {
+.box_general.school_info .follow_school a:hover {
     color: #3578fa;
 }
 
@@ -4836,35 +4831,35 @@ a.btn_support:before {
     min-height: 160px;
 }
 
-.company_listing .company_info {
+.company_listing .school_info {
     position: relative;
     padding-left: 190px;
 }
 
 @media (max-width: 767px) {
-    .company_listing .company_info {
+    .company_listing .school_info {
         padding-left: 0;
         text-align: center;
     }
 }
 
-.company_listing .company_info h3 {
+.company_listing .school_info h3 {
     font-size: 21px;
     font-size: 1.3125rem;
     font-weight: 500;
 }
 
-.company_listing .company_info p {
+.company_listing .school_info p {
     margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
-    .company_listing .company_info p {
+    .company_listing .school_info p {
         margin-bottom: 25px;
     }
 }
 
-.company_listing .company_info figure {
+.company_listing .school_info figure {
     width: 170px;
     height: 110px;
     overflow: hidden;
@@ -4877,13 +4872,13 @@ a.btn_support:before {
 }
 
 @media (max-width: 767px) {
-    .company_listing .company_info figure {
+    .company_listing .school_info figure {
         position: relative;
         margin: 0 auto 15px auto;
     }
 }
 
-.company_listing .company_info figure img {
+.company_listing .school_info figure img {
     width: 98px;
     height: auto;
     position: absolute;

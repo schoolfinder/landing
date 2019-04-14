@@ -54,5 +54,13 @@
                 'found' => '<strong>'.$results.'</strong> '.$text.' found'
             ]);
         }
+
+        public function view_school($request, $response, $args)
+        {
+            return $this->view->render($response, 'views/landing/view-school.html', [
+                'title' => 'School Name',
+                'uri' => 'view-school'
+            ]);
+        }
     }
     

@@ -31,7 +31,7 @@
 
 <body>
     <div id="page">
-        <header class="{{ (uri == 'search') ? 'header_in' : 'header menu_fixed' }}">
+        <header class="{{ (uri in ['search', 'view-school'] ) ? 'header_in' : 'header menu_fixed' }} {{ uri == 'view-school' ? 'is_fixed menu_fixed' : '' }}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-12">

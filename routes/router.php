@@ -7,4 +7,6 @@
         $this->get('/for-schools', 'WebController:for_schools')->setName('for-schools');
         $this->get('/search', 'WebController:search')->setName('search');
         $this->get('/pricing', 'WebController:pricing')->setName('pricing');
+
+        $this->get('/{slug}', 'WebController:view_school')->setName('view-school');
     });
