@@ -30,8 +30,8 @@
 </head>
 
 <body>
-    <div id="page">
-        <header class="{{ (uri in ['search', 'view-school'] ) ? 'header_in' : 'header menu_fixed' }} {{ uri == 'view-school' ? 'is_fixed menu_fixed' : '' }}">
+    <div id="page" class="theia-exception">
+        <header class="{{ (uri in ['search', 'schools', 'view-school'] ) ? 'header_in' : 'header menu_fixed' }} {{ uri == 'view-school' ? 'is_fixed menu_fixed' : '' }}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-12">
@@ -57,7 +57,7 @@
                         <nav id="menu" class="main-menu">
                             <ul>
                                 <li><span><a href="{{ path_for('home') }}">Home</a></span></li>
-                                <li><span><a href="{{ path_for('features') }}">Features</a></span></li>
+                                <li><span><a href="{{ path_for('schools') }}">Schools</a></span></li>
                                 <li><span><a href="{{ path_for('contact-us') }}">Contact Us</a></span></li>
                             </ul>
                         </nav>
@@ -189,6 +189,24 @@
     <!-- COMMON SCRIPTS -->
     <script src="{{ base_url() }}/assets/js/common_scripts.js"></script>
     <script src="{{ base_url() }}/assets/js/functions.js"></script>
+    <!-- Masonry Filtering -->
+    <script src="{{ base_url() }}/assets/js/isotope.min.js"></script>
+    <script>
+        $(window).on('load', function() {
+            var $container = $('.isotope-wrapper');
+            $container.isotope({
+                itemSelector: '.isotope-item',
+                layoutMode: 'masonry'
+            });
+        });
+
+        $('.date_filter').on('click', 'input', 'change', function() {
+            var selector = $(this).attr('data-filter');
+            $('.isotope-wrapper').isotope({
+                filter: selector
+            });
+        });
+    </script>
     <!-- <script src="assets/validate.js"></script> -->
     <!-- AIzaSyC-Q2J9EU8j4hRaEhh6gWTiSFEz0CQ9pcM -->
     <script>

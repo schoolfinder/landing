@@ -1,0 +1,127 @@
+{% extends "template/app.html" %} {% block main %} {% if type %}
+<div id="results">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-3 col-md-4 col-9">
+                <h1>{{ found|raw }}</h1>
+            </div>
+            <div class="col-xl-6 col-md-7 col-3">
+                <a href="#0" class="search_mob btn_search_mobile"></a>
+                {{ block('search_mob', "partials/forms/search-form.twig") }}
+            </div>
+        </div>
+
+        <div class="search_mob_wp">
+            {{ block('search_mob_wp', "partials/forms/search-form.twig") }}
+        </div>
+    </div>
+</div>
+
+<div class="container margin_60_35">
+    <div class="row">
+        <aside class="col-lg-3" id="sidebar">
+            {{ block('filters_sidebar', "partials/forms/filters-form.twig") }}
+        </aside>
+
+        <div class="col-lg-9">
+            <div class="isotope-wrapper">
+
+                <div class="review_listing isotope-item high d-none">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="company_info">
+                                <figure>
+                                    <a href="#"><img src="{{ base_url() }}/assets/img/brands/1.png" alt=""></a>
+                                </figure>
+                                <h4 class="mb-0">School Name</h4>
+                                <p>Tale tollit vocent quo ut. Eu vix menandri persequeris accommodare, nam ei virtute dissentiet. Nec prima indoctum ei, vis eu justo dictas tamquam...</p>
+                                <div class="ml-5">
+                                    <div class="float-lg-right">
+                                        <span class="rating">
+                                            <strong>Category</strong>
+                                            <div>
+                                                Ratings: <i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star empty"></i>
+                                            </div>
+                                        </span>
+                                    </div>
+
+                                    <div class="float-lg-left">
+                                        <ul class="clearfix">
+                                            <li><small>School Ammenities</small></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="float-lg-right">
+
+                                <div>
+                                    <a href="#" class="btn_1 small">View School</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <p class="text-center"><a href="#0" class="btn_2 rounded add_top_15">Load more</a></p>
+
+
+        </div>
+    </div>
+</div>
+{% else %}
+<section class="hero_single version_4 schools">
+    <div class="wrapper">
+        <div class="container">
+            <h3>Let's help you find the perfect school for your child.</h3>
+            <p>Start by providing your location.</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    {{ block('search_schools', "partials/forms/search-form.twig") }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container margin_60_35">
+    <div class="main_title_3">
+        <h2>Schools</h2>
+        <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+        <a href="#">View all</a>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-4 school-types">
+            <a href="{{ path_for('schools', {}, { 'type' : '' }) }}" class="box_cat_home">
+                <img src="img/icon_home_2.svg" width="65" height="65" alt="">
+                <h3>Creche/Day Care</h3>
+                <ul class="clearfix">
+                    <li class="text-center"><strong>856</strong> Results</li>
+                </ul>
+            </a>
+        </div>
+        <div class="col-lg-4 col-4 school-types">
+            <a href="{{ path_for('schools', {}, { 'type' : '' }) }}" class="box_cat_home">
+                <img src="img/icon_home_3.svg" width="65" height="65" alt="">
+                <h3>Primary/JHS</h3>
+                <ul class="clearfix">
+                    <li class="text-center"><strong>2,400</strong> Results</li>
+                </ul>
+            </a>
+        </div>
+        <div class="col-lg-4 col-4 school-types">
+            <a href="{{ path_for('schools', {}, { 'type' : '' }) }}" class="box_cat_home">
+                <img src="img/icon_home_4.svg" width="65" height="65" alt="">
+                <h3>Secondary Schools</h3>
+                <ul class="clearfix">
+                    <li class="text-center"><strong>854</strong> Results</li>
+                </ul>
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %} {% endblock %}

@@ -55,6 +55,19 @@
             ]);
         }
 
+        public function schools($request, $response)
+        {
+            $results = 0;
+            $text = ($results != 1) ? 'results' : 'result';
+            
+            return $this->view->render($response, 'views/landing/schools.html', [
+                'title' => 'Schools',
+                'uri' => 'schools',
+                'type' => $request->getParam('type'),
+                'found' => '<strong>'.$results.'</strong> '.$text.' found'
+            ]);
+        }
+
         public function view_school($request, $response, $args)
         {
             return $this->view->render($response, 'views/landing/view-school.html', [

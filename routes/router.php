@@ -8,5 +8,8 @@
         $this->get('/search', 'WebController:search')->setName('search');
         $this->get('/pricing', 'WebController:pricing')->setName('pricing');
 
-        $this->get('/{slug}', 'WebController:view_school')->setName('view-school');
+        $this->group('/schools', function() {
+            $this->get('/', 'WebController:schools')->setName('schools');
+            $this->get('/{slug}', 'WebController:view_school')->setName('view-school');
+        });
     });

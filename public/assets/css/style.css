@@ -1471,8 +1471,12 @@ ul#additional_links li:after {
 }
 
 .hero_single.version_2 {
-    height: 640px;
-    background: #051d4d url(../img/pattern_2.svg) center repeat fixed;
+    height: 350px;
+    background: #222 url(../img/pattern_2.svg) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 @media (max-width: 767px) {
@@ -1606,11 +1610,16 @@ ul#additional_links li:after {
 
 .hero_single.version_4 {
     height: 620px;
-    background: #222 url(../img/home_section_2.jpg) center center no-repeat;
+    background: #222 url(../img/pattern_2.svg) center center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.hero_single.version_4.schools {
+    height: 350px;
+    background: #222 url(../img/pattern_2.svg) center center no-repeat;
 }
 
 .hero_single.version_4 .wrapper {
@@ -2257,6 +2266,12 @@ a.box_cat_home {
     color: #999;
 }
 
+@media(max-width: 575px) {
+    a.box_cat_home {
+        padding: 35px 5px 25px 5px;
+    }
+}
+
 a.box_cat_home h3 {
     font-size: 18px;
     font-size: 1.125rem;
@@ -2268,6 +2283,12 @@ a.box_cat_home h3 {
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     border-radius: 25px;
+}
+
+@media(max-width: 425px) {
+    a.box_cat_home h3 {
+        font-size: .8rem;
+    }
 }
 
 a.box_cat_home:hover {
@@ -2290,24 +2311,28 @@ a.box_cat_home ul li {
     display: inline-block;
 }
 
-a.box_cat_home ul li:first-child {
+
+/* a.box_cat_home ul li:first-child {
     float: left;
-}
+} */
 
 @media (max-width: 575px) {
     a.box_cat_home ul li:first-child {
         float: none;
         display: block;
+        font-size: 12px;
     }
 }
 
-a.box_cat_home ul li:last-child {
+
+/* a.box_cat_home ul li:last-child {
     float: right;
-}
+} */
 
 @media (max-width: 575px) {
     a.box_cat_home ul li:last-child {
         float: none;
+        font-size: 12px;
     }
 }
 
@@ -3127,7 +3152,6 @@ a#filters_col_bt:before {
 
 .reviews_summary {
     margin-top: 58px;
-    background-image: url();
     border-bottom: 1px solid #ededed;
 }
 
@@ -6311,4 +6335,9 @@ a#forgot:hover {
 
 .mfp-bg {
     opacity: 0.8 !important;
+}
+
+.col-lg-4.school-types {
+    padding-right: 7px;
+    padding-left: 8px;
 }

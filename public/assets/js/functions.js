@@ -18,7 +18,7 @@
 	
 	// Mobile Mmenu
 	var $menu = $("nav#menu").mmenu({
-		"extensions": ["pagedim-black", "theme-white"],
+		"extensions": ["pagedim-black", "theme-dark"],
 		counters: true,
 		keyboardNavigation: {
 			enable: true,
