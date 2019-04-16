@@ -2683,6 +2683,13 @@ a.btn_search_mobile {
     position: relative;
 }
 
+@media(max-width: 425px) {
+    .filters_listing.sticky_horizontal div.container {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
+
 .filters_listing ul {
     margin: 0;
 }
@@ -2745,6 +2752,13 @@ a.btn_search_mobile {
     -ms-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     margin: 0;
+}
+
+@media(max-width: 425px) {
+    .switch-field label {
+        font-size: 0.6rem;
+        padding: 0 5px;
+    }
 }
 
 .switch-field label:last-of-type {
